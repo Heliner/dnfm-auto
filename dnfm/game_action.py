@@ -69,14 +69,6 @@ class GameAction:
                 continue
 
             AGAIN = match_template(self.AGAIN, screen)
-            # ada_image = cv.adaptiveThreshold(cv.cvtColor(
-            #     screen_row, cv.COLOR_BGR2GRAY), 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY_INV, 13, 3)
-            # cv.imshow('ada_image', screen)
-            # cv.waitKey(1)
-            # if np.sum(ada_image) == 0:
-            #     print('过图成功')
-            #     self.adb.touch_end(0, 0)
-            #     return
 
             result = self.yolo(screen)
             for obj in result:
