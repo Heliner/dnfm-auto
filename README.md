@@ -73,6 +73,8 @@ label-studio start
 
 ```python
 ['Gate' # 门, 'Hero' # 玩家人物, 'Item' # 掉落物品, 'Mark' # 箭头标记, 'Monster' # 怪物, 'Monster_Fake' # 怪物尸体]
+
+
 ```
 
 ### pt 转 ncnn 步骤

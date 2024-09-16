@@ -55,6 +55,10 @@ class GameControl:
     def moveRD(self):
         self._move_sequence([0, 270])
 
+    def moveRandom(self):
+        self._move_sequence([random.randint(0, 360), random.randint(0, 360)])
+
+
     def _move_sequence(self, angles: list):
         for angle in angles:
             x, y = self.calc_mov_point(angle)

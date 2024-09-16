@@ -176,7 +176,9 @@ class GameAction:
 
         else:
             print("未识别到任何物体, 随机移动")
-            self.moves[int(random.random() > 0.5)]()
+            ## fixme 识别地图上的图标，应该往哪边走然后移动
+            # self.moves[int(random.random() > 0.5)]()
+            self.ctrl.moveRandom()
             return None, ''
 
         return min_distance_obj, action_type
@@ -261,6 +263,7 @@ class GameAction:
             self.adb.tap(sx, sy, move_t)
         elif action_type == 'move':
             self.adb.tap(sx, sy, 2 if len(self.arrow) > 3 else move_t)
+
 
 if __name__ == '__main__':
     window_title = "Phone-f0d62d51"
